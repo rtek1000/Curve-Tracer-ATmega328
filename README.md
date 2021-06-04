@@ -1,5 +1,5 @@
 # Curve Tracer ATmega328
-Fault locator for electronic circuits
+Fault locator for electronic circuits, comparing V.I. curves (voltage and current)
 
 Open source firmware based on "InvCurv"
 
