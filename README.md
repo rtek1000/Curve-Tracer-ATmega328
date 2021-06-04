@@ -33,6 +33,9 @@ Also, the hardware is sold with sanded components, the original codes cannot be 
 
 The shield board is originally soldered directly to the Arduino board, no removable pin bar is used.
 
+This repository can serve to solve the curiosity of knowing what's inside the device box, since the device is sold with a security seal.
+---> Do not remove the security seal, as this may void the manufacturer's warranty.
+
 Note: Unless required by applicable law or agreed to in writing, the contents of this repository may only be used in an educational manner "AS IS", WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
 
 --------------
