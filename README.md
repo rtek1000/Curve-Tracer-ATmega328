@@ -3,6 +3,8 @@ Fault locator for electronic circuits
 
 Fully open source firmware for "InvCurve"
 
+Note: Program code has been tested only on ATmega328P (Arduino UNO, PRO MINI etc) should not work with Arduino Mega2560
+
 --------------
 
 To use this device, it is necessary to use the computer software (Microsoft Windows executable) provided by the manufacturer with the device.
