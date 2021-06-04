@@ -17,7 +17,7 @@ https://hackaday.io/project/16704-microcontroller-based-curve-tracer
 
 --------------
 
-This software is based on the operation of "InvCurve" marketed by "www.InverFlex.com.br".
+This software is based on the operation of "InvCurv" marketed by "www.InverFlex.com.br".
 
 Attention: This repository has no connection with this company, in any way, no complaints about the functioning of the device should be registered in this repository.
 
