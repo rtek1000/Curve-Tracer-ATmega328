@@ -1,4 +1,4 @@
-# Curve-Tracer-ATmega328
+# Curve Tracer ATmega328
 Fault locator for electronic circuits
 
 Fully open source firmware for "InvCurve"
