@@ -17,6 +17,8 @@ Also, on hardware sold with sanded components, the original codes cannot be read
 
 Note: Unless required by applicable law or agreed to in writing, the contents of this repository may only be used in an educational manner "AS IS", WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
 
+(The oscilloscope images are from a DSO150, if you want to find open source software for it, check this repository: https://github.com/Jason2866/Open-DSO-150 )
+
 Software License:
 This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.
 
