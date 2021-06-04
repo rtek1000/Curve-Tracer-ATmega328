@@ -31,6 +31,8 @@ The original device is produced with a microcontroller and its software is locke
 
 Also, the hardware is sold with sanded components, the original codes cannot be read. Therefore, the suggested codes may not be the same as the originals.
 
+The shield board is originally soldered directly to the Arduino board, no removable pin bar is used.
+
 Note: Unless required by applicable law or agreed to in writing, the contents of this repository may only be used in an educational manner "AS IS", WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
 
 --------------
