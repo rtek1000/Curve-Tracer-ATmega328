@@ -1,15 +1,17 @@
 # Curve-Tracer-ATmega328
 Fault locator for electronic circuits
 
-This software is based on the operation of "InvCurve" marketed by "InverFlex.com.br".
+Fully open source firmware for "InvCurve"
+
+This software is based on the operation of "InvCurve" marketed by "www.InverFlex.com.br".
 
 Attention: This repository has no connection with this company, in any way, no complaints about the functioning of the device should be registered in this repository.
 
-This software is for educational purposes only and should not be considered a replacement for the original product software.
+This software is for educational purposes only and should not be considered a reliable replacement for the original product software.
 
-The original device is produced with an ATmega328p microcontroller and its software is locked for reading, so it is not possible to save the original firmware in case the microcontroller fails.
+The original device is produced with a microcontroller and its software is locked for reading, so it is not possible to save the original firmware in case the microcontroller fails.
 
-Also, on hardware sold with sanded components, the original codes cannot be read. So the codes suggested in the schematic may not be the same as the originals actually are.
+Also, on hardware sold with sanded components, the original codes cannot be read. So the codes suggested may not be the same as the originals actually are.
 
 Note: Unless required by applicable law or agreed to in writing, the contents of this repository may only be used in an educational manner "AS IS", WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
 
