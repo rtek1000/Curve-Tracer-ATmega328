@@ -15,6 +15,9 @@ This device is just an interface between the printed circuit board to be tested 
 If you want to know another project of this type of device, go to this link:
 https://hackaday.io/project/16704-microcontroller-based-curve-tracer
 
+The website of another company that manufactures this type of defect locator can be accessed at this link:
+https://www.abielectronics.co.uk/
+
 --------------
 
 This software is for educational purposes only and should not be considered a reliable replacement for the original product software.
