@@ -3,9 +3,9 @@ Fault locator for electronic circuits, comparing V.I. curves (voltage and curren
 
 Open source firmware based on "InvCurv"
 
-Note: Program code has been tested only on ATmega328P (Arduino UNO, Pro Mini etc) should not work with Arduino Mega 2560 and others
+This software is based on the operation of "InvCurv" marketed by "www.InverFlex.com.br".
 
-Original board: https://store.arduino.cc/usa/arduino-uno-rev3
+Attention: This repository has no connection with this company, in any way, no complaints about the functioning of the device should be registered in this repository.
 
 --------------
 
@@ -14,12 +14,6 @@ This device is just an interface between the printed circuit board to be tested 
 
 If you want to know another project of this type of device, go to this link:
 https://hackaday.io/project/16704-microcontroller-based-curve-tracer
-
---------------
-
-This software is based on the operation of "InvCurv" marketed by "www.InverFlex.com.br".
-
-Attention: This repository has no connection with this company, in any way, no complaints about the functioning of the device should be registered in this repository.
 
 --------------
 
@@ -32,6 +26,10 @@ The original device is produced with a microcontroller and its software is locke
 Also, the hardware is sold with sanded components, the original codes cannot be read. Therefore, the suggested codes may not be the same as the originals.
 
 The shield board is originally soldered directly to the Arduino board, no pin female header is used.
+
+Note: Program code has been tested only on ATmega328P (Arduino UNO, Pro Mini etc) should not work with Arduino Mega 2560 and others
+
+Original board: https://store.arduino.cc/usa/arduino-uno-rev3
 
 If you are curious to know what is inside the device box, as the device is sold with a security seal: Do not remove the security seal, as this may void the manufacturer's warranty.
 
