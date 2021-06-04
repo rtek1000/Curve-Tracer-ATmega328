@@ -5,7 +5,7 @@ Fully open source firmware for "InvCurve"
 
 Note: Program code has been tested only on ATmega328P (Arduino UNO, Pro Mini etc) should not work with Arduino Mega2560
 
-Original board: https://store.arduino.cc/usa/arduino-uno-smd-rev3
+Original board: https://store.arduino.cc/usa/arduino-uno-rev3
 
 --------------
 
