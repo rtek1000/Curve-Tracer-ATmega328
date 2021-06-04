@@ -19,6 +19,8 @@ This software is based on the operation of "InvCurve" marketed by "www.InverFlex
 
 Attention: This repository has no connection with this company, in any way, no complaints about the functioning of the device should be registered in this repository.
 
+--------------
+
 This software is for educational purposes only and should not be considered a reliable replacement for the original product software.
 
 ---> Do not replace the original firmware of the product, otherwise you may lose the warranty offered by the manufacturer.
