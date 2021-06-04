@@ -5,7 +5,7 @@ Fully open source firmware for "InvCurve"
 
 
 
-To use this device, it is necessary to use the computer software provided by the manufacturer with the device.
+To use this device, it is necessary to use the computer software (Windows executable) provided by the manufacturer with the device.
 This device is just an interface between the printed circuit board to be tested and the computer that compares the V.I. curves.
 
 If you want to know another project of this type of device, go to this link:
