@@ -25,9 +25,9 @@ This software is for educational purposes only and should not be considered a re
 
 ---> Do not replace the original firmware of the product, otherwise you may lose the warranty offered by the manufacturer.
 
-The original device is produced with a microcontroller and its software is locked for reading, so it is not possible to save the original firmware in case the microcontroller fails.
+The original device is produced with a microcontroller and its software is locked for reading, it is not possible to save the original firmware, for backup, for repair, in case the microcontroller fails.
 
-Also, on hardware sold with sanded components, the original codes cannot be read. So the codes suggested may not be the same as the originals actually are.
+Also, the hardware is sold with sanded components, the original codes cannot be read. Therefore, the suggested codes may not be the same as the originals.
 
 Note: Unless required by applicable law or agreed to in writing, the contents of this repository may only be used in an educational manner "AS IS", WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
 
