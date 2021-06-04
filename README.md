@@ -9,7 +9,7 @@ Attention: This repository has no connection with this company, in any way, no c
 
 --------------
 
----> To use this device, it is necessary to use the computer software (Microsoft Windows executable) provided by the manufacturer with the device.
+---> To use this device, it is necessary to use the computer software (Microsoft Windows executable) supplied by the manufacturer, shipped with the device and cables.
 This device is just an interface between the printed circuit board to be tested and the computer that compares the V.I. curves.
 
 If you want to know another project of this type of device, go to this link:
