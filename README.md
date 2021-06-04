@@ -9,6 +9,8 @@ Attention: This repository has no connection with this company, in any way, no c
 
 This software is for educational purposes only and should not be considered a reliable replacement for the original product software.
 
+---> Do not replace the original firmware of the product, otherwise you may lose the warranty offered by the manufacturer.
+
 The original device is produced with a microcontroller and its software is locked for reading, so it is not possible to save the original firmware in case the microcontroller fails.
 
 Also, on hardware sold with sanded components, the original codes cannot be read. So the codes suggested may not be the same as the originals actually are.
