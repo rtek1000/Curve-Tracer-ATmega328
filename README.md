@@ -1,7 +1,7 @@
 # Curve Tracer ATmega328
 Fault locator for electronic circuits
 
-Open source firmware for "InvCurve"
+Open source firmware based on "InvCurv"
 
 Note: Program code has been tested only on ATmega328P (Arduino UNO, Pro Mini etc) should not work with Arduino Mega 2560 and others
 
