@@ -7,6 +7,9 @@ This software is based on the operation of "InvCurv" marketed by "www.InverFlex.
 
 Attention: This repository has no connection with this company, in any way, no complaints about the functioning of the device should be registered in this repository.
 
+Todo: Check DIDR register in setup.
+Ref.: http://www.openmusiclabs.com/learning/digital/atmega-adc/index.html
+
 --------------
 
 ---> To use this device, it is necessary to use the computer software (Microsoft Windows executable) supplied by the manufacturer, shipped with the device and cables.
