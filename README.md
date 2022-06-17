@@ -10,6 +10,9 @@ Attention: This repository has no connection with this company, in any way, no c
 Todo: Check DIDR register in setup.
 Ref.: http://www.openmusiclabs.com/learning/digital/atmega-adc/index.html
 
+Todo: Remove the use of the TimerOne library, because it is not GPL compliant.
+Ref.: https://www.diffen.com/difference/Creative_Commons_License_vs_GPL
+
 --------------
 
 ---> To use this device, it is necessary to use the computer software (Microsoft Windows executable) supplied by the manufacturer, shipped with the device and cables.
