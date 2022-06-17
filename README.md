@@ -7,11 +7,11 @@ This software is based on the operation of "InvCurv" marketed by "www.InverFlex.
 
 Attention: This repository has no connection with this company, in any way, no complaints about the functioning of the device should be registered in this repository.
 
-Todo: Check DIDR register in setup.
-Ref.: http://www.openmusiclabs.com/learning/digital/atmega-adc/index.html
+- Todo: Check DIDR register in setup.
+- - Ref.: http://www.openmusiclabs.com/learning/digital/atmega-adc/index.html
 
-Todo: Remove the use of the TimerOne library, because it is not GPL compliant.
-Ref.: https://www.diffen.com/difference/Creative_Commons_License_vs_GPL
+- Todo: Remove the use of the TimerOne library, because it is not GPL compliant.
+- - Ref.: https://www.diffen.com/difference/Creative_Commons_License_vs_GPL
 
 --------------
 
