@@ -59,9 +59,9 @@ float f_adc2_tmp = 0.0;
 
 volatile int count0 = 0;
 
-volatile int i_adc0_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
-volatile int i_adc1_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
-volatile int i_adc2_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
+volatile int i_adc0_tmp = 0; // from float to int to reduce jitter (loses accuracy on division)
+volatile int i_adc1_tmp = 0; // from float to int to reduce jitter (loses accuracy on division)
+volatile int i_adc2_tmp = 0; // from float to int to reduce jitter (loses accuracy on division)
 volatile int val_tmp_tmr = 0;
 
 void setup() {
@@ -329,22 +329,22 @@ void tmr1_int() {
 
     if (buff_status[0] == 2) {
       adc0[i][0] = i_adc0_tmp + adc0[i][0];
-      adc0[i][0] /= 2.0;
+      adc0[i][0] /= 2;
 
       adc1[i][0] = i_adc1_tmp + adc1[i][0];
-      adc1[i][0] /= 2.0;
+      adc1[i][0] /= 2;
 
       adc2[i][0] = i_adc2_tmp + adc2[i][0];
-      adc2[i][0] /= 2.0;
+      adc2[i][0] /= 2;
     } else if (buff_status[1] == 2) {
       adc0[i][1] = i_adc0_tmp + adc0[i][1];
-      adc0[i][1] /= 2.0;
+      adc0[i][1] /= 2;
 
       adc1[i][1] = i_adc1_tmp + adc1[i][1];
-      adc1[i][1] /= 2.0;
+      adc1[i][1] /= 2;
 
       adc2[i][1] = i_adc2_tmp + adc2[i][1];
-      adc2[i][1] /= 2.0;
+      adc2[i][1] /= 2;
     }
   } else {
     if (buff_status[1] == 2) {
