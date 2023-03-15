@@ -53,12 +53,15 @@ int val_tmp = 0;
 byte val_100 = 0;
 byte val_10 = 0;
 byte val_1 = 0;
+float f_adc0_tmp = 0.0;
+float f_adc1_tmp = 0.0;
+float f_adc2_tmp = 0.0;
 
 volatile int count0 = 0;
 
-volatile int f_adc0_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
-volatile int f_adc1_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
-volatile int f_adc2_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
+volatile int i_adc0_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
+volatile int i_adc1_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
+volatile int i_adc2_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
 volatile int val_tmp_tmr = 0;
 
 void setup() {
@@ -320,27 +323,27 @@ void tmr1_int() {
   val_tmp_tmr = 129; // mid_point
 
   if (i < 65) {
-    f_adc0_tmp = analogRead(A0);
-    f_adc1_tmp = analogRead(A1);
-    f_adc2_tmp = analogRead(A2);
+    i_adc0_tmp = analogRead(A0);
+    i_adc1_tmp = analogRead(A1);
+    i_adc2_tmp = analogRead(A2);
 
     if (buff_status[0] == 2) {
-      adc0[i][0] = f_adc0_tmp + adc0[i][0];
+      adc0[i][0] = i_adc0_tmp + adc0[i][0];
       adc0[i][0] /= 2.0;
 
-      adc1[i][0] = f_adc1_tmp + adc1[i][0];
+      adc1[i][0] = i_adc1_tmp + adc1[i][0];
       adc1[i][0] /= 2.0;
 
-      adc2[i][0] = f_adc2_tmp + adc2[i][0];
+      adc2[i][0] = i_adc2_tmp + adc2[i][0];
       adc2[i][0] /= 2.0;
     } else if (buff_status[1] == 2) {
-      adc0[i][1] = f_adc0_tmp + adc0[i][1];
+      adc0[i][1] = i_adc0_tmp + adc0[i][1];
       adc0[i][1] /= 2.0;
 
-      adc1[i][1] = f_adc1_tmp + adc1[i][1];
+      adc1[i][1] = i_adc1_tmp + adc1[i][1];
       adc1[i][1] /= 2.0;
 
-      adc2[i][1] = f_adc2_tmp + adc2[i][1];
+      adc2[i][1] = i_adc2_tmp + adc2[i][1];
       adc2[i][1] /= 2.0;
     }
   } else {
