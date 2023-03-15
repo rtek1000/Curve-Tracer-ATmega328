@@ -15,27 +15,28 @@
 #define latch_clk 5
 
 #define led 3
+#define led2 4 // To View Timer Jitter Using the Oscilloscope (2.66kHz)
 
 #define buff_ch 2
 volatile int buff_index = 0;
 volatile int buff_status[buff_ch] = {0};
 
-int adc0_tmp = 0;
-int adc1_tmp = 0;
-int adc2_tmp = 0;
+volatile int adc0_tmp = 0;
+volatile int adc1_tmp = 0;
+volatile int adc2_tmp = 0;
 
-int i = 0;
-int adc0[65][buff_ch] = {{0}, {0}};
-int adc1[65][buff_ch] = {{0}, {0}};
-int adc2[65][buff_ch] = {{0}, {0}};
+volatile int i = 0;
+volatile int adc0[65][buff_ch] = {{0}, {0}};
+volatile int adc1[65][buff_ch] = {{0}, {0}};
+volatile int adc2[65][buff_ch] = {{0}, {0}};
 
-byte flag0 = 0;
+volatile byte flag0 = 0;
 
 // https://www.daycounter.com/Calculators/Sine-Generator-Calculator.phtml
 // Number of points: 64
 // Max Amplitude: 203
 
-const int wave[] = {
+volatile const int wave[] = {
   0x65, 0x6f, 0x79, 0x82, 0x8c, 0x95, 0x9d, 0xa5,
   0xac, 0xb3, 0xb9, 0xbe, 0xc2, 0xc6, 0xc8, 0xca,
   0xca, 0xca, 0xc8, 0xc6, 0xc2, 0xbe, 0xb9, 0xb3,
@@ -46,18 +47,19 @@ const int wave[] = {
   0x1e, 0x25, 0x2d, 0x35, 0x3e, 0x48, 0x51, 0x5b, 0x65
 };
 
-const byte offset = 28;
+volatile const byte offset = 28;
 
 int val_tmp = 0;
 byte val_100 = 0;
 byte val_10 = 0;
 byte val_1 = 0;
 
-int count0 = 0;
+volatile int count0 = 0;
 
-float f_adc0_tmp = 0.0;
-float f_adc1_tmp = 0.0;
-float f_adc2_tmp = 0.0;
+volatile int f_adc0_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
+volatile int f_adc1_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
+volatile int f_adc2_tmp = 0.0; // from float to int to reduce jitter (loses accuracy on division)
+volatile int val_tmp_tmr = 0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -73,6 +75,7 @@ void setup() {
   pinMode(latch_d7, OUTPUT);
   pinMode(latch_clk, OUTPUT);
   pinMode(led, OUTPUT);
+  pinMode(led2, OUTPUT);
 
   digitalWrite(latch_d0, HIGH);
   digitalWrite(latch_d1, LOW);
@@ -98,7 +101,7 @@ void setup() {
   ADMUX |= (0 & 0x07);    // set A0 analog input pin
   ADMUX |= (1 << REFS0);  // set reference voltage
 
-  ADCSRA |= (1 << ADPS2);                     // 16 prescaler for 76.9 KHz
+  ADCSRA |= (1 << ADPS2); // 16 prescaler for 76.9 KHz
 
   ADCSRA |= (1 << ADEN);  // enable ADC
 }
@@ -312,7 +315,9 @@ void loop() {
 }
 
 void tmr1_int() {
-  int val_tmp = 129; // mid_point
+  digitalWrite(led2, !digitalRead(led2)); // To View Timer Jitter Using the Oscilloscope (2.66kHz)
+
+  val_tmp_tmr = 129; // mid_point
 
   if (i < 65) {
     f_adc0_tmp = analogRead(A0);
@@ -347,52 +352,52 @@ void tmr1_int() {
   }
 
   if (i < 65) {
-    val_tmp = wave[i] + offset;
+    val_tmp_tmr = wave[i] + offset;
   }
 
-  if (val_tmp & 1) {
+  if (val_tmp_tmr & 1) {
     PORTB = PORTB | B00000001;
   } else {
     PORTB = PORTB & B11111110;
   }
 
-  if ((val_tmp >> 1) & 1) {
+  if ((val_tmp_tmr >> 1) & 1) {
     PORTB = PORTB | B00000010;
   } else {
     PORTB = PORTB & B11111101;
   }
 
-  if ((val_tmp >> 2) & 1) {
+  if ((val_tmp_tmr >> 2) & 1) {
     PORTB = PORTB | B00000100;
   } else {
     PORTB = PORTB & B11111011;
   }
 
-  if ((val_tmp >> 3) & 1) {
+  if ((val_tmp_tmr >> 3) & 1) {
     PORTB = PORTB | B00001000;
   } else {
     PORTB = PORTB & B11110111;
   }
 
-  if ((val_tmp >> 4) & 1) {
+  if ((val_tmp_tmr >> 4) & 1) {
     PORTB = PORTB | B00010000;
   } else {
     PORTB = PORTB & B11101111;
   }
 
-  if ((val_tmp >> 5) & 1) {
+  if ((val_tmp_tmr >> 5) & 1) {
     PORTB = PORTB | B00100000;
   } else {
     PORTB = PORTB & B11011111;
   }
 
-  if ((val_tmp >> 6) & 1) {
+  if ((val_tmp_tmr >> 6) & 1) {
     PORTD = PORTD | B10000000;
   } else {
     PORTD = PORTD & B01111111;
   }
 
-  if ((val_tmp >> 7) & 1) {
+  if ((val_tmp_tmr >> 7) & 1) {
     PORTD = PORTD | B01000000;
   } else {
     PORTD = PORTD & B10111111;
