@@ -1,6 +1,12 @@
 # Curve Tracer ATmega328
 Fault locator for electronic circuits, comparing V.I. curves (voltage and current)
 
+-------
+
+Check WiFi version using ESP32: [Curve-Tracer-ESP32](https://github.com/rtek1000/Curve-Tracer-ESP32)
+
+-------
+
 Open source firmware based on "InvCurv"
 
 This software is based on the operation of "InvCurv" marketed by "www.InverFlex.com.br".
