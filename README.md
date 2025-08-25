@@ -18,9 +18,7 @@ Attention: This repository has no connection with this company, in any way, no c
 
 - Todo: Remove the use of the TimerOne library, because it is not GPL compliant.
 - - Ref.: https://www.diffen.com/difference/Creative_Commons_License_vs_GPL
- 
-- Possible alternative:
-- - [TimerInterrupt](https://github.com/rtek1000/TimerInterrupt/tree/master/examples/Timer1InterruptTest) library (MIT). 
+- - - Possible alternative: [TimerInterrupt](https://github.com/rtek1000/TimerInterrupt/tree/master/examples/Timer1InterruptTest) library (MIT). 
 
 --------------
 
